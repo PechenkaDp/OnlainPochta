@@ -1,0 +1,32 @@
+﻿<Window x:Class="OnlainPochta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnlainPochta"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="163*"></RowDefinition>
+            <RowDefinition Height="54*"></RowDefinition>
+            <RowDefinition Height="53*"></RowDefinition>
+            <RowDefinition Height="78*"></RowDefinition>
+            <RowDefinition Height="87*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"></ColumnDefinition>
+            <ColumnDefinition Width="11*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="VhodButton" Content="Войти на почту" HorizontalAlignment="Left" Margin="322,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="58" Width="182" Grid.ColumnSpan="2" Click="VhodButton_Click"/>
+        <TextBox x:Name="Pochta" HorizontalAlignment="Left" Margin="261,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Адрес почты" VerticalAlignment="Top" Width="187" Height="27"/>
+        <ComboBox x:Name="Service" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="1"  Text="Почтовый сервис" VerticalAlignment="Top" Width="123" Height="27">
+            <ComboBoxItem Content="yandex.ru" Tag="imap.yandex.ru"></ComboBoxItem>
+            <ComboBoxItem Content="mail.ru" Tag="imap.mail.ru"></ComboBoxItem>
+            <ComboBoxItem Content="rambler.ru" Tag="imap.rambler.ru"></ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="Password" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="261,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="310" Height="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="261,57,0,0" TextWrapping="Wrap" Text="Почта России" VerticalAlignment="Top" Height="70" Width="310" Grid.ColumnSpan="2" TextAlignment="Center" FontSize="30"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="258,145,0,0" TextWrapping="Wrap" Text="теперь онлаен" VerticalAlignment="Top" Width="84" Height="18" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
